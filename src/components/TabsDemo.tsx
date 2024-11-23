@@ -78,7 +78,10 @@ export function TabsDemo() {
         {filterNews(activeTab)
           .slice(0, visibleCount) // Display only the visible number of cards
           .map((article, index) => (
-            <div key={index} className="max-w-xs w-full group/card">
+            <div 
+              key={`${article.url || index}`} // Use `url` as key, fallback to `index`
+              className="max-w-xs w-full group/card"
+            >
               <div
                 className="cursor-pointer overflow-hidden relative h-96 rounded-md shadow-xl max-w-sm mx-auto flex flex-col justify-between p-4 bg-cover bg-center"
                 style={{
@@ -121,7 +124,7 @@ export function TabsDemo() {
         <div className="text-center mt-6">
           <button
             onClick={handleShowMore}
-          className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2"
+            className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2"
           >
             Show More
           </button>

@@ -9,7 +9,7 @@ import { TabsDemo } from "@/components/TabsDemo";
 export default function Home() {
   return (
     <>
-      <main className="min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.2]">
+      <main className="min-h-screen after: bg-black  antialiased bg-grid-white/[0.2]">
       
         <HeroSection />
 
